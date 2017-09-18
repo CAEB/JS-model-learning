@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width:100px;
+            height:100px;
+            background: red;
+            position: relative;
+        }
+    </style>
+    <script src="../jquery/jquery.min.js"></script>
+</head>
+<body>
+<div></div>
+<button>click</button>
+<input type="text">
+<script src="index.js"></script>
+<script>
+    var time = new Date('2017-9-30');
+    var newDate=new Date(time.setDate(time.getDate()+1));
+    console.log(newDate)
+</script>
+</body>
+</html>

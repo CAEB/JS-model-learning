@@ -176,4 +176,21 @@ tipName.one('all',function (data) {
 tipName.trigger('all',{name:'qwd'});
 tipName.remove('all');
 tipName.trigger('all',{name:'qwe'});
-
+//todo jquery中的实现
+(function ($) {
+    var event=$({});
+    $.listen = function () {
+        event.on.apply(event,arguments)
+    };
+    $.unListen = function () {
+        event.off.apply(event,arguments)
+    };
+    $.publish = function () {
+        event.trigger.apply(event,arguments)
+    }
+})(jQuery);
+function cb(event,a,b,c) {
+    console.log(event,a+b+c);
+}
+$.listen('jquery',cb);
+$.publish('jquery',['q','w','d']);
