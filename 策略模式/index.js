@@ -7,13 +7,17 @@ $('button').on('click',function () {
 //实践，表单的验证
 var validataList = {
     notNull (value) {
-        return value!==''
+        return value.trim()!==''
     },
     maxL (value,length) {
         return value.length > length
     },
     onlyNumber (value) {
-        return !isNaN(value)
-    }
+        return !isNaN(value);
+    },
 };
+
+$('button').on('click',function () {
+    console.log(validataList.notNull($('input').val()),validataList.maxL($('input').val(),10),validataList.onlyNumber($('input').val()));
+});
 
